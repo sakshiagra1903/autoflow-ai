@@ -283,6 +283,9 @@ pytest -q
 
 SupplyShield AI is intended for educational research, experimentation, and decision support. Results should be independently verified before operational, procurement, policy, or financial decisions.
 
-## License
+<img width="1920" height="1080" alt="Screenshot 2026-10-11 164231" src="https://github.com/user-attachments/assets/7b4f5d76-f515-4e4b-8828-e904428dfa8e" />
+<img width="1920" height="1080" alt="Screenshot 2026-10-11 164219" src="https://github.com/user-attachments/assets/d05303dc-0c77-4508-b4b9-378f9b7cbddd" />
+<img width="1920" height="1080" alt="Screenshot 2026-10-11 164206" src="https://github.com/user-attachments/assets/49775306-ef40-4784-8afc-1ea12934bae4" />
+<img width="1920" height="1080" alt="Screenshot 2026-10-11 164130" src="https://github.com/user-attachments/assets/54400c1f-0797-41b2-833f-fa0d4c9b91df" />
 
-Choose and add an appropriate open-source license before distributing the repository. Confirm that any third-party datasets and dependencies permit the intended use.
+
