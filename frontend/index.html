@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SupplyShield AI — Supply Chain Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-mark">S<span>+</span></div><div><strong>SupplyShield</strong><small>INTELLIGENCE SYSTEM</small></div></div>
+  <div class="nav-label">WORKSPACE</div>
+  <button class="nav-item active" data-view="overview"><span class="nav-icon">▦</span> Overview</button>
+  <button class="nav-item" data-view="investigate"><span class="nav-icon">⌕</span> Investigations</button>
+  <button class="nav-item" data-view="exposure"><span class="nav-icon">⌘</span> Exposure graph</button>
+  <button class="nav-item" data-view="evidence"><span class="nav-icon">▤</span> Evidence & data</button>
+  <div class="sidebar-bottom"><div class="status-dot"></div><div><b>Local analysis engine</b><small>API connected · No paid LLM</small></div></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><div class="eyebrow">INDIA · SUPPLY CHAIN MONITORING</div><h1 id="page-title">Overview</h1></div><div class="top-actions"><span class="demo-pill"><i></i> SYNTHETIC DEMO DATA</span><button class="icon-button" id="refresh-btn" title="Refresh data">↻</button></div></header>
+<div class="notice"><strong>Research prototype</strong><span>Signals are statistical anomalies, not proof of shortages or real-world disruption. Bundled records are synthetic, not official trade data.</span></div>
+<section id="overview-view" class="view">
+  <div class="section-heading"><div><h2>Supply risk radar</h2><p>Monitor unusual movements across three strategic import categories.</p></div><span class="updated" id="period-label">Loading coverage…</span></div>
+  <div class="metric-grid" id="metric-grid"></div>
+  <div class="content-grid">
+    <article class="panel chart-panel"><div class="panel-head"><div><h3>Import value over time</h3><p>Monthly synthetic values · USD</p></div><select id="chart-commodity" aria-label="Chart commodity"></select></div><div class="chart-wrap"><canvas id="trend-chart" height="270"></canvas></div><div class="chart-legend"><span><i class="legend-line"></i> Import value</span><span>2015—2024 · Monthly</span></div></article>
+    <article class="panel"><div class="panel-head"><div><h3>Latest anomaly signals</h3><p>Flagged by statistical baselines</p></div><span class="count-chip" id="signal-count">—</span></div><div id="latest-signals" class="signal-list"></div><button class="text-button" data-goto="investigate">Open investigations <span>→</span></button></article>
+  </div>
+  <div class="section-heading compact"><div><h2>Commodity watchlist</h2><p>Coverage and signal count for each category.</p></div></div>
+  <div class="panel table-panel"><table><thead><tr><th>COMMODITY</th><th>HS CLASSIFICATION</th><th>MONTHS COVERED</th><th>FLAGGED MONTHS</th><th></th></tr></thead><tbody id="watchlist"></tbody></table></div>
+</section>
+<section id="investigate-view" class="view hidden">
+  <div class="section-heading"><div><h2>Investigation workspace</h2><p>Run the reproducible analysis → impact → evidence → verification workflow.</p></div></div>
+  <div class="panel investigation-controls"><label for="investigate-commodity">COMMODITY</label><select id="investigate-commodity"></select><label for="investigate-month">MONTH (OPTIONAL)</label><select id="investigate-month"><option value="">Latest flagged month</option></select><button class="primary-button" id="run-investigation">Run investigation <span>↗</span></button></div>
+  <div id="report-output"><div class="empty-state"><div class="empty-icon">⌕</div><h3>Ready to investigate</h3><p>Choose a commodity and run the workflow. Results are generated locally from the bundled demo data.</p></div></div>
+</section>
+<section id="exposure-view" class="view hidden">
+  <div class="section-heading"><div><h2>Dependency & exposure graph</h2><p>Explore partner concentration and illustrative downstream dependencies.</p></div><select id="graph-commodity"></select></div>
+  <div class="panel graph-panel"><div id="graph-visual" class="graph-visual"></div><div class="graph-key"><span><i class="key-country"></i> Partner country</span><span><i class="key-commodity"></i> Commodity</span><span><i class="key-industry"></i> Downstream industry</span></div></div>
+  <p class="footnote">Country shares and industry edges are illustrative. Industry links are assumptions requiring source validation, not verified causal claims.</p>
+</section>
+<section id="evidence-view" class="view hidden">
+  <div class="section-heading"><div><h2>Evidence & data quality</h2><p>Source provenance, coverage, and limitations are visible by design.</p></div></div>
+  <div id="quality-cards" class="metric-grid"></div>
+  <div class="panel table-panel"><div class="panel-head"><div><h3>Reference sources</h3><p>Official portals for future data ingestion; no live retrieval performed.</p></div></div><div id="evidence-list" class="evidence-list"></div></div>
+  <div class="panel methodology"><h3>Detection methodology</h3><div class="method-grid"><div><span class="method-number">01</span><b>Feature engineering</b><p>Month-over-month changes, rolling 12-month baseline and numeric features.</p></div><div><span class="method-number">02</span><b>Rolling z-score</b><p>Flags observations at least 2 rolling standard deviations from baseline, when enough history exists.</p></div><div><span class="method-number">03</span><b>Isolation Forest</b><p>Unsupervised comparison model with a fixed random seed for reproducibility.</p></div><div><span class="method-number">04</span><b>Evidence verification</b><p>Unsupported real-world claims are withheld; demo records are never presented as official evidence.</p></div></div></div>
+</section>
+<footer><span>SUPPLYSHIELD AI <b>·</b> v1.0.0</span><span>Educational decision-support · Verify independently before operational or financial decisions.</span></footer>
+</main>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="/static/app.js"></script>
+</body></html>

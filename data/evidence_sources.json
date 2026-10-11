@@ -1,0 +1,32 @@
+[
+  {
+    "id": "E-DEMO-001",
+    "title": "World Bank Commodity Markets \u2014 Pink Sheet landing page",
+    "publisher": "World Bank",
+    "published_date": null,
+    "url": "https://www.worldbank.org/en/research/commodity-markets",
+    "commodity": "all",
+    "type": "reference_link",
+    "note": "Reference link only; no data was downloaded for this demo. Use a dated release before making a factual event claim."
+  },
+  {
+    "id": "E-DEMO-002",
+    "title": "UN Comtrade API documentation",
+    "publisher": "United Nations Statistics Division",
+    "published_date": null,
+    "url": "https://comtradeapi.un.org/",
+    "commodity": "all",
+    "type": "reference_link",
+    "note": "API documentation only; bundled trade data is synthetic."
+  },
+  {
+    "id": "E-DEMO-003",
+    "title": "Directorate General of Commercial Intelligence and Statistics",
+    "publisher": "Government of India",
+    "published_date": null,
+    "url": "https://www.dgciskol.gov.in/",
+    "commodity": "all",
+    "type": "reference_link",
+    "note": "Official portal reference; no DGCIS dataset is bundled."
+  }
+]
